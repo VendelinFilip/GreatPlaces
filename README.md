@@ -1,6 +1,7 @@
 # great_places
 
-A new Flutter project.
+A new Flutter project. An app for locally storing photos of favorite places and then seeing them on a map dependent (of course) on location. Part of the Academind Udemy Flutter course.
+https://www.udemy.com/course/learn-flutter-dart-to-build-ios-android-apps/
 
 ## Getting Started
 
