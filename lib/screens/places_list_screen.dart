@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 
 import './add_place_screen.dart';
 import '../providers/great_places.dart';
+import '../screens/place_detail_screen.dart';
 
 class PlacesListScreen extends StatelessWidget {
   @override
@@ -36,6 +37,7 @@ class PlacesListScreen extends StatelessWidget {
                         ? child
                         : ListView.builder(
                             itemCount: greatPlaces.items.length,
+                            // i INDEX HERE
                             itemBuilder: (ctx, i) => ListTile(
                               leading: CircleAvatar(
                                 backgroundImage: FileImage(
@@ -46,7 +48,9 @@ class PlacesListScreen extends StatelessWidget {
                               subtitle:
                                   Text(greatPlaces.items[i].location.address),
                               onTap: () {
-                                // Go to detail page ...
+                                Navigator.of(context).pushNamed(
+                                    PlaceDetailScreen.routeName,
+                                    arguments: greatPlaces.items[i].id);
                               },
                             ),
                           ),
